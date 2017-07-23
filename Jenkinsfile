@@ -2,29 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Dsk') {
             steps {
-                echo 'Building..'
+                sh 'df -h'
             }
         }
-        stage('Test') {
+        stage('list') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-		 stage('check1') {
-            steps {
-                sh 'cal'
-            }
-        }
-        stage('check2') {
-            steps {
-                sh 'date'
+                sh 'ls'
             }
         }
     }
